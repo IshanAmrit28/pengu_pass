@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        color: #495057;
+        background-image: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmluYXJ5fGVufDB8fDB8fHww");
+        background-size: cover;
+        background-position: center;
+        /* background-repeat: no-repeat;  */
+      }
+
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        background: linear-gradient(to right, #000000, #000000);
+        overflow: hidden;
+        text-align: center;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+      }
+      nav > div {
+      display: flex;
+      align-items: center;
+
+    }
+    .logo img{
+        width:30%;
+        height: 30%;
+        object-fit: cover;
+        margin-top: 1px;
+    }
+    h1 {
+      margin: 0;
+      color:#fff
+    }
+      nav a {
+        display: inline-block;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        margin: 0 8px;
+        border-radius: 8px;
+        background-color: #062600;
+      }
+
+      nav a:hover {
+        background-color: #7cfc4e;
+        border: 1px solid #062600;
+      }
+      
+      #image {
+        width: 30%;
+        max-width: 30%;
+        margin-top: 1px;
+        float: left;
+      }
+      #head{
+      margin-left:-150px;
+      color:#fff
+    }
+      h2,
+      h1 {
+        text-align: center;
+        color: #fff;
+      }
+
+      .team-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .team-member {
+        text-align: center;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #7cfc4e;
+        border-radius: 15px;
+        background-color: #143d0d;
+        width: 20%;
+      }
+
+      .team-member img {
+        width: 100%;
+        height: 400px; /* Set a fixed height for consistency */
+        object-fit: cover; /* Maintain aspect ratio and cover the container */
+        margin-top: 30px;
+    }
+      
+      #Image {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 30px;
+      }
+      footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+}
+    </style>
+  </head>
+
+  <body>
+    <nav><div>
+      <div class="logo" >
+          <img src="data:image/png;base64,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" alt="" id="image">
+      </div>
+      <div>
+        <h1 id="head">PENGUPASS</h1>
+      </div>
+    </div>
+ 
+      <div>
+  
+          <a href="/">Home</a>
+          <a href="/about_us">About Us</a>
+          <a href="/password_tool">Features</a>
+          <a href="/contact_us">Contact Us</a>
+      </div>
+  </nav>
+    <h1>About Us</h1>
+
+    <div class="team-container">
+      <div class="team-member">
+        <img
+          src="https://media.licdn.com/dms/image/D4D03AQH699mRQKoazg/profile-displayphoto-shrink_400_400/0/1703240640113?e=1708560000&v=beta&t=wkr0OBon7TUyz6eG9GtnYYnLD5J_wDCOxUzxEU2zVIo"
+          alt="Team Member 1"
+          id="Image"
+        />
+        <h1>Team Member 1</h1>
+        <h2>Ishan Amrit Srivastava</h2>
+        <h2>Reg. no.: 22BCE10382</h2>
+      </div>
+
+      <div class="team-member">
+        <img
+          src="https://media.licdn.com/dms/image/D5635AQGTFntdlsLRYw/profile-framedphoto-shrink_100_100/0/1678194894240?e=1703847600&v=beta&t=sj6MT010Vo6BLhYA6lwgjqhWECuXoWm2B7dviathRR8"
+          alt="Team Member 2"
+          id="Image"
+        />
+        <h1>Team Member 2</h1>
+        <h2>Atharva Sathe</h2>
+        <h2>Reg. no.: 22BCE10389</h2>
+      </div>
+
+      <div class="team-member">
+        <img
+          src="{{ url_for('static', filename='mitali.jpg') }}"
+          alt="Team Member 3"
+          id="Image"
+        />
+        <h1>Team Member 3</h1>
+        <h2>Mitali Dubey</h2>
+        <h2>Reg. no.: 22BCE10491</h2>
+      </div>
+
+      <div class="team-member">
+        <img
+          src="https://media.licdn.com/dms/image/D4D03AQGpHzLnaC4xUA/profile-displayphoto-shrink_400_400/0/1692366014754?e=1708560000&v=beta&t=x-M2qYCRo05K8jcue4F1bc5bYKTLl5CWEKlGVzlpAyw"
+          alt="Team Member 4"
+          id="Image"
+        />
+        <h1>Team Member 4</h1>
+        <h2>Ayush Pandey</h2>
+        <h2>Reg. no.: 22BCE10375</h2>
+      </div>
+
+      <div class="team-member">
+        <img
+          id="Image"
+          src="{{ url_for('static', filename='kriti.jpg') }}"
+          alt="Profile Image"
+        />
+        <h1>Team Member 5</h1>
+        <h2>Kriti Porwal</h2>
+        <h2>Reg. no.: 22BCE10370</h2>
+      </div>
+
+      <div class="team-member">
+        <img
+          src="{{ url_for('static', filename='mitul.jpg') }}"
+          alt="Team Member 6"
+          id="Image"
+        />
+        <h1>Team Member 6</h1>
+        <h2>Mitul</h2>
+        <h2>Reg. no.: 22BCE10491</h2>
+      </div>
+
+      <div class="team-member">
+        <img
+          src="{{ url_for('static', filename='shashank.jpg') }}"
+          alt="Team Member 7"
+          id="Image"
+        />
+        <h1>Team Member 7</h1>
+        <h2>Shashank</h2>
+        <h2>Reg. no.: 22BCE10211</h2>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2023 Ishan Amrit Srivastava. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
